@@ -26,6 +26,9 @@ app.get('/api/monthly-comparison', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch monthly comparison data' })
   }
 })
+app.get('/keep-alive', (req, res) => {
+  res.status(200).send('I am alive!');
+});
 
 app.get('/api/top-products', async (req, res) => {
   try {
